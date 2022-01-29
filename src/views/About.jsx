@@ -2,13 +2,14 @@ import { motion } from 'framer-motion'
 
 export default function About() {
   return (
-    <motion.div
-      initial={{ scaleY: 0 }}
-      animate={{ scaleY: 1 }}
-      exit={{ scaleY: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      About
-    </motion.div>
+    <motion.article initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <p>
+        This site is a work in progress by{' '}
+        <a href="https://github.com/diyanamendoza" alt="D Mendoza Github">
+          D. Mendoza
+        </a>
+        .
+      </p>
+    </motion.article>
   )
 }
