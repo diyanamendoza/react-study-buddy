@@ -1,3 +1,25 @@
+import Home from './views/Home'
+import About from './views/About'
+import styles from './App.css'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
+import Detail from './views/Detail'
+import Header from './components/Header'
+
 export default function App() {
-  return <h1>Hello World</h1>;
+  const location = useLocation()
+
+  return (
+    <div className={styles.App}>
+      <Header />
+
+      <AnimatePresence exitBeforeEnter initial={true}>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="/:subject" element={<Detail />} />
+        </Routes>
+      </AnimatePresence>
+    </div>
+  )
 }
