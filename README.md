@@ -1,7 +1,8 @@
-# react-template
+# react-verse
 
-A starter template for React projects at Alchemy Code Lab. We'll be using this in the "Advanced React" portion of the program.
+A work in progress! This site is where I'm compiling React/JS related vocab.
 
-## Getting Started
+## FYI
 
-Click "Use this template" to create a new repo with your user as the owner. Then clone down the newly created repo and get hacking!
+This site pulls from a backend project of mine, also still in the works:
+https://github.com/diyanamendoza/react-hooks-api
