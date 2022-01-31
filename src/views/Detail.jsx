@@ -11,6 +11,7 @@ export default function Detail() {
   const { subject } = useParams()
   const [content, setContent] = useState('')
   const [source, setSource] = useState('')
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const getContent = async () => {
@@ -23,12 +24,12 @@ export default function Detail() {
           const [hook] = hooksArray.filter((hook) => hook.title === subject)
           setSource(hook.source)
           setContent(hook.explanation)
-          console.log(content)
+          setLoading(false)
           break
         case 'other':
           setContent(entry.explanation)
           setSource(entry.source)
-          console.log(content)
+          setLoading(false)
           break
         default:
           console.log(`huh?`)
@@ -60,7 +61,7 @@ export default function Detail() {
     <motion.main variants={rSlideVariants} initial="initial" animate="animate">
       <motion.article initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
         <h2>{subject}</h2>
-        <p>{content && content}</p>
+        {loading ? <p>Loading definition...</p> : <p>{content}</p>}
         <a href={source} alt={`source for ${subject}`}>
           Source
         </a>
