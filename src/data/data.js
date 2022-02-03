@@ -27,6 +27,14 @@ export const data = [
       'State is a special built-in object in React that makes it possible for components to create and manage their own data. This data management can happen in three ways: locally (the data and updaters are limited to the scope of the component), parentally (data and updaters are passed in as props from higher up in the component tree), and remotely (data is stored and updated outside of the ancestry of the component tree). Local state can be managed with useState, useReducer, or this.state (via a class component). Parental state might be used when you need the data passed to be accessed by other children, or when you want to make testing the child component easier by passing props into it. Remote state management is accomplished with tools like Redux and React Context API. ',
     source: 'https://kyleshevlin.com/three-kinds-of-react-state',
   },
+  {
+    subject: 'Components',
+    category: 'other',
+    explanation:
+      'Components are independent, reusable code blocks. These blocks make up the user interface (UI) of your React app, rather than having a UI composed all in one single file. There are two types of React components: functional and class. Functional components are ES6 functions (traditional syntax or arrow syntax) that return a React JSX element and are exported from their respective files to be used in your views/pages. Class components use ES6 classes to define a component and must include a render method for returning the JSX element. We used to use class components more because older versions of React did not allow the use of state inside functional components. Since hooks entered the scene, state can now be managed in functional components.',
+    source:
+      'https://www.freecodecamp.org/news/react-components-jsx-props-for-beginners/',
+  },
   { subject: 'useReducer', category: 'hooks' },
   { subject: 'useRef', category: 'hooks' },
   { subject: 'useCallback', category: 'hooks' },
