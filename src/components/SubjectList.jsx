@@ -12,13 +12,11 @@ export default function SubjectList() {
   const [filterInput, setFilterInput] = useState('')
 
   const filterItems = (query) => {
-    console.log(query)
     setFilterInput(query.toLowerCase())
     const results = data.filter((item) => {
       const name = item.subject.toLowerCase()
       return name.includes(query)
     })
-    console.log(results)
     setFilterResults(results)
     setList(results)
   }
