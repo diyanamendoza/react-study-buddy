@@ -6,9 +6,10 @@ export default function Header() {
       <Link to="/">
         <h1>React-verse</h1>
       </Link>
-      <Link to="/about">
+      <p>/* a site (in-progress) by and for the React nerds among us */</p>
+      {/* <Link to="/about">
         <h3>About</h3>
-      </Link>
+      </Link> */}
     </header>
   )
 }

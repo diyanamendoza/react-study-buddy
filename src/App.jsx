@@ -5,6 +5,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Detail from './views/Detail'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 export default function App() {
   const location = useLocation()
@@ -20,6 +21,8 @@ export default function App() {
           <Route path="/:subject" element={<Detail />} />
         </Routes>
       </AnimatePresence>
+
+      <Footer />
     </div>
   )
 }
