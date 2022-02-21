@@ -38,4 +38,12 @@ export const data = [
   { subject: 'useReducer', category: 'hooks' },
   { subject: 'useRef', category: 'hooks' },
   { subject: 'useCallback', category: 'hooks' },
+  {
+    subject: 'Error Boundary',
+    category: 'other',
+    explanation:
+      'A component meant to handle runtime errors. Must be written as a class component. You can wrap individual components in your error boundary component or wrap the app at the root level. The error boundary component must implement one or both of these methods: getDerivedStateFromError, componentDidCatch. The latter lets you catch the error and handle it as desired (e.g., log it somewhere specific). The former is for updating your class state so you can render a fallback UI if error state is true. Note: There is an npm module called "react-error-boundary" that does some of the set up above for you.',
+    source:
+      'https://kentcdodds.com/blog/use-react-error-boundary-to-handle-errors-in-react',
+  },
 ]
